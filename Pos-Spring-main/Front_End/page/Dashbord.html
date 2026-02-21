@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POS Dashboard</title>
+
+  <style>
+
+    /*body {*/
+    /*  margin: 0;*/
+    /*  font-family: "Segoe UI", sans-serif;*/
+    /*  background: radial-gradient(circle at top left, #0f2027, #10b3e4);*/
+    /*  min-height: 100vh;*/
+    /*  display: flex;*/
+    /*  align-items: center;*/
+    /*  justify-content: center;*/
+    /*  color: #e6f1ff;*/
+    /*  font-size: 18px;*/
+    /*}*/
+
+    /*.dashboard {*/
+    /*  width: 90%;*/
+    /*  max-width: 1250px;*/
+    /*  border-radius: 24px;*/
+    /*  padding: 45px;*/
+    /*  border: 2px solid rgba(0, 195, 255, 0.45);*/
+    /*  background: rgba(10, 15, 25, 0.9);*/
+    /*  backdrop-filter: blur(12px);*/
+    /*}*/
+
+    /*h1 {*/
+    /*  text-align: center;*/
+    /*  margin-bottom: 35px;*/
+    /*  font-size: 2.8rem;*/
+    /*  color: #4fd1ff;*/
+    /*  text-shadow: 0 0 14px rgba(79, 209, 255, 0.7);*/
+    /*}*/
+
+
+    /*.stats {*/
+    /*  display: grid;*/
+    /*  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));*/
+    /*  gap: 24px;*/
+    /*  margin-bottom: 40px;*/
+    /*}*/
+
+    /*.stat-card {*/
+    /*  background: linear-gradient(145deg, #081018, #0e1a2b);*/
+    /*  border-radius: 16px;*/
+    /*  padding: 28px;*/
+    /*  text-align: center;*/
+    /*  border: 2px solid #00c3ff44;*/
+    /*  transition: 0.25s;*/
+    /*}*/
+
+    /*.stat-card:hover {*/
+    /*  transform: translateY(-6px);*/
+    /*  box-shadow: 0 0 22px rgba(0, 195, 255, 0.6);*/
+    /*}*/
+
+    /*.stat-card p {*/
+    /*  margin: 0;*/
+    /*  opacity: 0.85;*/
+    /*  font-size: 1.05rem;*/
+    /*}*/
+
+    /*.stat-card h2 {*/
+    /*  margin-top: 12px;*/
+    /*  font-size: 2.4rem;*/
+    /*  color: #00c3ff;*/
+    /*}*/
+
+
+    /*.menu {*/
+    /*  display: grid;*/
+    /*  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));*/
+    /*  gap: 22px;*/
+    /*}*/
+
+    /*.menu a {*/
+    /*  text-decoration: none;*/
+    /*  background: linear-gradient(135deg, #00c3ff, #0066ff);*/
+    /*  color: white;*/
+    /*  padding: 26px;*/
+    /*  border-radius: 16px;*/
+    /*  text-align: center;*/
+    /*  font-size: 1.25rem;*/
+    /*  font-weight: 700;*/
+    /*  transition: 0.25s;*/
+    /*  display: block;*/
+    /*  border: 2px solid rgba(253, 243, 243, 0.89);*/
+    /*}*/
+
+    /*.menu a:hover {*/
+    /*  transform: scale(1.06);*/
+    /*  box-shadow: 0 0 20px rgba(200, 215, 220, 0.97);*/
+    /*}*/
+
+    /*.footer {*/
+    /*  text-align: center;*/
+    /*  margin-top: 40px;*/
+    /*  font-size: 15px;*/
+    /*  opacity: 0.75;*/
+    /*}*/
+
+    /* -------------------- Body -------------------- */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0c1524, #1a2a4a);
+      margin: 0;
+      padding: 2rem;
+      color: #e0e0e0;
+    }
+
+    /* -------------------- Dashboard Container -------------------- */
+    .dashboard {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Dashboard Title */
+    .dashboard h1 {
+      font-size: 2.2rem;
+      color: #a8c0ff;
+      margin-bottom: 2rem;
+    }
+
+    /* -------------------- Stats Cards -------------------- */
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      flex: 1 1 200px;
+      background: rgba(12, 21, 36, 0.75);
+      backdrop-filter: blur(6px);
+      padding: 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+    }
+
+    .stat-card p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #c0c0c0;
+    }
+
+    .stat-card h2 {
+      font-size: 2rem;
+      margin: 0;
+      color: #4caf50;
+    }
+
+    /* -------------------- Menu -------------------- */
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .menu a {
+      flex: 1 1 150px;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      background: rgba(86, 120, 190, 0.7);
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .menu a:hover {
+      background: #4caf50;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+<div class="dashboard">
+  <h1> POS Dashboard Panel</h1>
+
+  <div class="stats">
+    <div class="stat-card">
+      <p>Total Customers</p>
+      <h2>50</h2>
+    </div>
+    <div class="stat-card">
+      <p>Transactions</p>
+      <h2>250</h2>
+    </div>
+    <div class="stat-card">
+      <p>Items Sold</p>
+      <h2>100</h2>
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="#" onclick="goCustomer()">Customers</a>
+    <a href="#" onclick="goItem()">Items</a>
+    <a href="#" onclick="goOrder()">Place Order</a>
+  </div>
+
+
+</div>
+
+<script>
+  function goCustomer() {
+    window.location.href = "customer.html";
+  }
+
+  function goItem() {
+    window.location.href = "item.html";
+  }
+
+  function goOrder() {
+    window.location.href = "place-order.html";
+  }
+</script>
+</body>
+</html>
