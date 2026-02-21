@@ -4,14 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.example.posbackend.dto.OderDeatilesDto;
 import java.util.List;
-/**
- * --------------------------------------------
- * Author: Savindu Nawanjana
- * --------------------------------------------
- * Created: 2/16/26 9:04 PM
- * Project: SpringFramework74-main
- * --------------------------------------------
- */
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

@@ -68,7 +68,7 @@ public class PlaceOderService implements PlaceOderServiceInterface {
             int custormerQty = Integer.parseInt(oderDeatilesDto1.getQty());
 
             if(qty<custormerQty){
-                throw new NullPointerException("not avelable this qty  in the stor "+ item2.getId());
+                throw new NullPointerException("Quantity not available "+ item2.getId());
 
             }
             int newItemqty = qty-custormerQty;

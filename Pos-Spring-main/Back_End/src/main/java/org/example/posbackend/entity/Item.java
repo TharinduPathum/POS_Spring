@@ -11,14 +11,6 @@ import lombok.Setter;
 
 import java.util.List;
 
-/**
- * --------------------------------------------
- * Author: Savindu Nawanjana
- * --------------------------------------------
- * Created: 2/14/26 3:11 PM
- * Project: SpringFramework74-main
- * --------------------------------------------
- */
 
 @Entity
 @AllArgsConstructor

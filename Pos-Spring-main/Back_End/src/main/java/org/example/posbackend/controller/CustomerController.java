@@ -29,8 +29,8 @@ public class CustomerController {
     public ResponseEntity<APIRespons<String>>  updateCustomer(@RequestBody  @Valid CustomerDTO customerDTO) {
         System.out.println(customerDTO);
         System.out.println(customerDTO.getCId());
-        System.out.println(customerDTO.getCaddress());
-        System.out.println(customerDTO.getCname());
+        System.out.println(customerDTO.getCAddress());
+        System.out.println(customerDTO.getCName());
         customerService.updateCustormer(customerDTO);
         return new ResponseEntity<>(new APIRespons<>(200,"Updated Successfully",null), HttpStatus.CREATED);
 

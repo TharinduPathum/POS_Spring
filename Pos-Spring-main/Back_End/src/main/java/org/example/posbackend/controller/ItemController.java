@@ -40,7 +40,7 @@ public class ItemController {
 
         itemServiceInterface.updateItem(itemDto);
 
-        return new ResponseEntity<>(new APIRespons<>(200,"Item update Succses fully...",null), HttpStatus.CREATED);
+        return new ResponseEntity<>(new APIRespons<>(200,"Item updated Succsesfully",null), HttpStatus.CREATED);
 
     }
 

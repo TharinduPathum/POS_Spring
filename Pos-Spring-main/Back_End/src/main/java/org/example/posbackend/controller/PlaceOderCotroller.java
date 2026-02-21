@@ -33,7 +33,7 @@ public class PlaceOderCotroller {
 
         placeOderServiceInterface.saveOder(oderDto, OderDeatiles);
 
-         return new ResponseEntity<>(new APIRespons<>(201,"Oder saved Succses fully...",null), HttpStatus.CREATED);
+         return new ResponseEntity<>(new APIRespons<>(201,"Order saved Successfully",null), HttpStatus.CREATED);
     }
 
 

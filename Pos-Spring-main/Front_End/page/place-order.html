@@ -472,7 +472,7 @@
           },
           error: function (respons, textStatus, xhr) {
             Swal.fire({
-              title: "Saved UnSuccessfully ! ",
+              title: "Not Saved! ",
               text: "",
               icon: "success",
               timer: 2000,
@@ -490,7 +490,7 @@
             $("#oderId").val(id);
           },
           error: function (respons) {
-            console.log("Internal Serer Error...");
+            console.log("Internal Server Error...");
           },
         });
       }
